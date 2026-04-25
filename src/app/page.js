@@ -22,7 +22,6 @@ export default function Home() {
     { number: 98, suffix: "%", label: "Success Rate" },
   ];
 
-  // ================= ANIMATION VARIANTS =================
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     show: {
@@ -39,7 +38,6 @@ export default function Home() {
     },
   };
 
-  // ================= SMOOTH SCROLL =================
   useEffect(() => {
     const lenis = new Lenis({
       lerp: 0.07,
@@ -55,7 +53,6 @@ export default function Home() {
     return () => lenis.destroy();
   }, []);
 
-  // ================= COUNTER =================
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -92,7 +89,8 @@ export default function Home() {
     requestAnimationFrame(animate);
   }, [startCount]);
 
-  // ================= CANVAS GRID =================
+
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -107,7 +105,7 @@ export default function Home() {
     resize();
     window.addEventListener("resize", resize);
 
-    const gridSize = 22;
+    const gridSize = 35;
     let time = 0;
 
     const draw = () => {
@@ -165,7 +163,7 @@ export default function Home() {
     return () => window.removeEventListener("resize", resize);
   }, []);
 
-  
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       mouse.current = { x: e.clientX, y: e.clientY };
@@ -184,7 +182,6 @@ export default function Home() {
         className="fixed inset-0 z-0 pointer-events-none"
       />
 
-      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#f5f5f5]/70 border-b border-[#022E2F]/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
 
@@ -203,48 +200,69 @@ export default function Home() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden"
+            className="md:hidden flex flex-col gap-[4px]"
           >
-            ☰
+            <span className={`w-5 h-[2px] bg-[#022E2F] ${open ? "rotate-45 translate-y-[6px]" : ""}`} />
+            <span className={`w-5 h-[2px] bg-[#022E2F] ${open ? "opacity-0" : ""}`} />
+            <span className={`w-5 h-[2px] bg-[#022E2F] ${open ? "-rotate-45 -translate-y-[6px]" : ""}`} />
           </button>
+
+        </div>
+
+        {/* MOBILE MENU */}
+        <div
+          className={`md:hidden bg-[#f5f5f5] border-t border-[#022E2F]/10 overflow-hidden transition-all duration-300 ${open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+            }`}
+        >
+          <div className="flex flex-col px-6 py-4 gap-4 text-sm text-[#022E2F]/70">
+            {["Home", "About", "Program", "Artikel", "Contact"].map((item, i) => (
+              <a
+                key={i}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
         </div>
       </nav>
 
       {/* HERO */}
-      <section id="home" className="h-screen flex flex-col justify-center items-center text-center relative z-10">
-        <motion.h1 variants={fadeUp} initial="hidden" animate="show" className="text-6xl font-semibold">
-          LRRPN-BI SURABAYA
-        </motion.h1>
+      <motion.section id="home" className="h-screen flex flex-col justify-center items-center text-center relative z-10">        <motion.h1 variants={fadeUp} initial="hidden" animate="show" className="text-6xl font-semibold">
+        LRRPN-BI SURABAYA
+      </motion.h1>
 
         <motion.p variants={fadeUp} initial="hidden" animate="show" className="mt-6 text-sm text-[#022E2F]/70">
           Rehabilitasi fisik, mental, dan sosial
         </motion.p>
-      </section>
+      </motion.section >
 
 
 
 
 
       {/* ABOUT */}
-      <motion.section
+      < motion.section
         id="about"
         variants={stagger}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true }
+        }
         className="py-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-20 relative z-10"
       >
         <motion.div variants={fadeUp}>
           <h2 className="text-3xl font-semibold mb-6">Pendekatan Humanis</h2>
           <p className="text-sm text-[#022E2F]/70">
-            Pendekatan medis dan psikologis yang dirancang untuk pemulihan menyeluruh.
+            Pendekatan medis dan psikologis yang dirancang untuk mendukung proses pemulihan secara menyeluruh, mencakup penanganan fisik, mental, serta kesejahteraan emosional pasien.
           </p>
         </motion.div>
 
         <motion.div variants={fadeUp} className="border border border-[#022E2F]/10 p-10 rounded-xl">
-          Fokus pada reintegrasi sosial pasien.
+          Fokus pada proses reintegrasi sosial pasien agar dapat kembali berfungsi secara optimal di lingkungan keluarga dan masyarakat, dengan dukungan yang berkelanjutan serta pendekatan yang terarah.
         </motion.div>
-      </motion.section>
+      </motion.section >
 
 
 
@@ -258,14 +276,19 @@ export default function Home() {
       {/* STATS */}
       <section
         ref={sectionRef}
-        className="py-32 grid grid-cols-2 md:grid-cols-4 text-center max-w-5xl mx-auto relative z-10"
+        className="py-20 md:py-32 px-6 grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6 text-center max-w-5xl mx-auto relative z-10"
       >
         {statsData.map((item, i) => (
-          <div key={i}>
-            <h3 className="text-2xl font-semibold">
+          <div key={i} className="space-y-2">
+
+            <h3 className="text-2xl md:text-3xl font-semibold">
               {counts[i]}{item.suffix}
             </h3>
-            <p className="text-xs">{item.label}</p>
+
+            <p className="text-xs md:text-sm text-[#022E2F]/70">
+              {item.label}
+            </p>
+
           </div>
         ))}
       </section>
@@ -281,9 +304,8 @@ export default function Home() {
 
 
 
-
       {/* PROGRAM */}
-      <motion.section
+      < motion.section
         id="program"
         variants={stagger}
         initial="hidden"
@@ -322,7 +344,7 @@ export default function Home() {
           </div>
 
         </div>
-      </motion.section>
+      </motion.section >
 
 
 
@@ -339,7 +361,7 @@ export default function Home() {
 
 
       {/* ARTICLE */}
-      <motion.section
+      < motion.section
         id="article"
         variants={stagger}
         initial="hidden"
@@ -380,7 +402,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section >
 
 
 
@@ -395,7 +417,7 @@ export default function Home() {
 
 
       {/* PROSES */}
-      <motion.section
+      < motion.section
         variants={stagger}
         initial="hidden"
         whileInView="show"
@@ -433,7 +455,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section >
 
 
 
@@ -447,7 +469,7 @@ export default function Home() {
 
 
       {/* TESTIMONI */}
-      <motion.section
+      < motion.section
         variants={stagger}
         initial="hidden"
         whileInView="show"
@@ -479,7 +501,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section >
 
 
 
@@ -489,17 +511,17 @@ export default function Home() {
 
 
 
-      {/* FOOTER */} 
-      <footer id="contact" className="relative pt-40 pb-20 mt-10 border-t border-[#022E2F]/10"> 
-      <div className="max-w-7xl mx-auto px-6">
-         <div className="grid md:grid-cols-2 gap-20"> 
-          <div className=""> 
-            <div className=" flex flex-1 items-center gap-3"> 
-              <Image src="/Logo-Bnn.jpg" alt="Logo LRRPN-BI Surabaya" width={32} height={32} className="object-contain" /> 
-              <h2 className="text-sm font-semibold tracking-wide"> LRRPN-BI Surabaya </h2> 
-              </div> 
-              <p className="mt-4 text-[#022E2F]/70 text-sm leading-relaxed max-w-md"> Layanan rehabilitasi narkotika dengan pendekatan medis dan psikologis. </p> 
-              </div> <div className="flex flex-col md:flex-row gap-12"> <div className="flex-1"> <h3 className="font-semibold mb-4 text-sm">Alamat</h3> <div className="text-sm text-[#022E2F]/70"> Jl. Khairil Anwar No.23<br /> Surabaya Jawa Timur 60241 </div> </div> <div className="flex-1"> <h3 className="font-semibold mb-4 text-sm">Kontak</h3> <div className="flex items-center gap-2 text-sm text-[#022E2F]/70"> <Phone size={16} /> <span>08123263524</span> </div> <div className="flex items-center gap-2 text-sm text-[#022E2F]/70 mt-2"> <Mail size={16} /> <span>lrrpnbisurabaya@gmail.com </span> </div> </div> </div> </div> <div className="mt-16 border-t border-[#022E2F]/10 pt-6 flex justify-between text-xs text-[#022E2F]/50"> <p>© 2026 LRRPN-BI Surabaya</p> <div className="flex gap-6"> <a href="#about">About</a> <a href="#program">Program</a> <a href="#contact">Contact</a> </div> </div> </div> </footer>
-    </main>
+      {/* FOOTER */}
+      < footer id="contact" className="relative pt-40 pb-20 mt-10 border-t border-[#022E2F]/10" >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-20">
+            <div className="">
+              <div className=" flex flex-1 items-center gap-3">
+                <Image src="/Logo-Bnn.jpg" alt="Logo LRRPN-BI Surabaya" width={32} height={32} className="object-contain" />
+                <h2 className="text-sm font-semibold tracking-wide"> LRRPN-BI Surabaya </h2>
+              </div>
+              <p className="mt-4 text-[#022E2F]/70 text-sm leading-relaxed max-w-md">  Layanan rehabilitasi narkotika dengan pendekatan medis dan psikologis yang terintegrasi, dirancang untuk membantu proses pemulihan secara menyeluruh, mulai dari penanganan fisik hingga pemulihan mental dan sosial pasien. </p>
+            </div> <div className="flex flex-col md:flex-row gap-12"> <div className="flex-1"> <h3 className="font-semibold mb-4 text-sm">Alamat</h3> <div className="text-sm text-[#022E2F]/70"> Jl. Khairil Anwar No.23<br /> Surabaya Jawa Timur 60241 </div> </div> <div className="flex-1"> <h3 className="font-semibold mb-4 text-sm">Kontak</h3> <div className="flex items-center gap-2 text-sm text-[#022E2F]/70"> <Phone size={16} /> <span>08123263524</span> </div> <div className="flex items-center gap-2 text-sm text-[#022E2F]/70 mt-2"> <Mail size={16} /> <span>lrrpnbisurabaya@gmail.com </span> </div> </div> </div> </div> <div className="mt-16 border-t border-[#022E2F]/10 pt-6 flex justify-between text-xs text-[#022E2F]/50"> <p>© 2026 LRRPN-BI Surabaya</p> <div className="flex gap-6"> <a href="#about">About</a> <a href="#program">Program</a> <a href="#contact">Contact</a> </div> </div> </div> </footer >
+    </main >
   );
 }
