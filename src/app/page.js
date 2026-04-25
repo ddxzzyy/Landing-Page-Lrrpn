@@ -215,7 +215,7 @@ export default function Home() {
             }`}
         >
           <div className="flex flex-col px-6 py-4 gap-4 text-sm text-[#022E2F]/70">
-            {["Home", "About", "Program", "Artikel", "Contact"].map((item, i) => (
+            {["Home", "About", "Program"].map((item, i) => (
               <a
                 key={i}
                 href={`#${item.toLowerCase()}`}
