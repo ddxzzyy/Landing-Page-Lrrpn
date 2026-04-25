@@ -186,7 +186,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
 
           <div className="flex-1 flex items-center gap-3">
-            <Image src="/Logo-Bnn.jpg" alt="Logo" width={32} height={32} />
+            <Image src="/Logo-Bnn.png" alt="Logo" width={32} height={32} />
             <h1 className="text-xs uppercase font-semibold tracking-[0.2em]">
               LRRPN-BI Surabaya
             </h1>
@@ -517,7 +517,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-20">
             <div className="">
               <div className=" flex flex-1 items-center gap-3">
-                <Image src="/Logo-Bnn.jpg" alt="Logo LRRPN-BI Surabaya" width={32} height={32} className="object-contain" />
+                <Image src="/Logo-Bnn.png" alt="Logo LRRPN-BI Surabaya" width={32} height={32} className="object-contain" />
                 <h2 className="text-sm font-semibold tracking-wide"> LRRPN-BI Surabaya </h2>
               </div>
               <p className="mt-4 text-[#022E2F]/70 text-sm leading-relaxed max-w-md">  Layanan rehabilitasi narkotika dengan pendekatan medis dan psikologis yang terintegrasi, dirancang untuk membantu proses pemulihan secara menyeluruh, mulai dari penanganan fisik hingga pemulihan mental dan sosial pasien. </p>
