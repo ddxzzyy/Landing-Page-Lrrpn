@@ -23,7 +23,7 @@ export default function Hero() {
                 transition={{
                     duration: 0.8,
                 }}
-                className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight"
+                className="text-5xl sm:text-5xl md:text-7xl font-semibold leading-tight"
             >
                 LRRPN-BI
                 <br />

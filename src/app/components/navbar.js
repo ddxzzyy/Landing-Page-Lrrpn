@@ -118,10 +118,6 @@ export default function Navbar() {
               Contact
             </a>
 
-            {/* BUTTON */}
-            <button className="mt-4 w-full rounded-full bg-orange-500 hover:bg-orange-400 transition py-4 text-sm font-medium">
-              Konsultasi Sekarang
-            </button>
 
           </div>
         </motion.div>
