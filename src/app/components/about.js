@@ -1,35 +1,79 @@
-"use client";
-import { useState } from "react";
 export default function About() {
-    const [open, setOpen] = useState(false);
-
-    
-    return (
-
-      <section
-        id="about"
-        className="py-24 md:py-32 px-4 md:px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-20 relative z-10"
-      >
+  return (
+    <section
+      id="about"
+      className="py-32 px-4 md:px-6 max-w-6xl mx-auto relative z-10"
+    >
+      <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        
+        {/* LEFT SIDE */}
         <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            Pendekatan Humanis
+          <span className="text-xs tracking-[0.2em] text-orange-500 uppercase">
+            Tentang Kami
+          </span>
+
+          <h2 className="text-3xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
+            Pendekatan Humanis dalam Rehabilitasi
           </h2>
 
-          <p className="text-sm md:text-base text-white/60 leading-relaxed">
-            Pendekatan medis dan psikologis yang
-            dirancang untuk mendukung proses
-            pemulihan secara menyeluruh.
+          <p className="text-white/60 leading-relaxed mb-8">
+            Pendekatan medis dan psikologis yang dirancang untuk mendukung proses
+            pemulihan secara menyeluruh dengan fokus pada keberlanjutan perubahan
+            perilaku dan reintegrasi sosial.
           </p>
+
+          {/* mini highlights */}
+          <div className="space-y-3">
+            <MiniItem text="Terapi Medis Terintegrasi" />
+            <MiniItem text="Pendampingan Psikologis Intensif" />
+            <MiniItem text="Reintegrasi Sosial Berkelanjutan" />
+          </div>
         </div>
 
-        <div className="border border-orange-500/10 p-6 md:p-10 rounded-3xl bg-white/5 backdrop-blur-xl text-sm md:text-base leading-relaxed">
-          Fokus pada reintegrasi sosial pasien agar
-          dapat kembali berfungsi optimal di
-          lingkungan keluarga dan masyarakat.
+        {/* RIGHT SIDE (VISUAL STACKED CARDS) */}
+        <div className="relative">
+
+          {/* MAIN CARD */}
+          <div className="p-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg">
+            <h3 className="text-orange-500 font-semibold mb-3">
+              Fokus Utama Program
+            </h3>
+
+            <p className="text-white/70 leading-relaxed">
+              Mengembalikan fungsi individu secara utuh melalui pendekatan medis,
+              psikologis, dan sosial yang terintegrasi dalam satu sistem rehabilitasi.
+            </p>
+          </div>
+
+          {/* FLOAT CARD 1 */}
+          <div className="absolute -top-6 -right-6 p-5 rounded-2xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-xl">
+            <p className="text-xs text-orange-500 tracking-wide">
+              Holistic Care
+            </p>
+            <p className="text-white/60 text-xs mt-1">
+              Medis + Psikologis
+            </p>
+          </div>
+
+          {/* FLOAT CARD 2 */}
+          <div className="absolute -bottom-6 -left-6 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+            <p className="text-xs text-white/70">
+              Berbasis Pemulihan Jangka Panjang
+            </p>
+          </div>
+
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-
-
-    )
+/* SMALL COMPONENT */
+function MiniItem({ text }) {
+  return (
+    <div className="flex items-center gap-2 text-sm text-white/60">
+      <span className="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+      {text}
+    </div>
+  );
 }

@@ -287,30 +287,46 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+
       {/* STATS */}
       <section
         ref={sectionRef}
-        className="py-20 md:py-32 px-4 md:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-5xl mx-auto relative z-10"
+        className="py-20 md:py-32 px-4 md:px-6 max-w-5xl mx-auto relative z-10"
       >
-        {statsData.map((item, i) => (
-          <motion.div
-            whileHover={{
-              y: -8,
-              scale: 1.03,
-            }}
-            key={i}
-            className="space-y-2 border border-orange-500/10 rounded-3xl p-5 md:p-8 bg-white/5 backdrop-blur-xl"
-          >
-            <h3 className="text-2xl md:text-4xl font-semibold text-orange-500">
-              {counts[i]}
-              {item.suffix}
-            </h3>
+        <div className="text-center mb-3">
+          <span className="text-xs  tracking-[0.2em] text-orange-500 uppercase">
+            Tentang Kami
+          </span>
+        </div>
 
-            <p className="text-[11px] md:text-sm text-white/60">
-              {item.label}
-            </p>
-          </motion.div>
-        ))}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
+            Pencapaian Kami
+          </h2>
+          <p className="text-white/60 text-sm md:text-base mt-3 max-w-xl mx-auto">
+            Data ini menunjukkan komitmen kami dalam memberikan layanan terbaik dan hasil yang terukur.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+          {statsData.map((item, i) => (
+            <motion.div
+              whileHover={{ y: -8, scale: 1.03 }}
+              key={i}
+              className="space-y-2 border border-orange-500/10 rounded-3xl p-5 md:p-8 bg-white/5 backdrop-blur-xl"
+            >
+              <h3 className="text-2xl md:text-4xl font-semibold text-orange-500">
+                {counts[i]}
+                {item.suffix}
+              </h3>
+
+              <p className="text-[11px] md:text-sm text-white/60">
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </section>
       <Program />
       <Footer />
