@@ -17,16 +17,18 @@ export default function About() {
           </h2>
 
           <p className="text-white/60 leading-relaxed mb-8">
-            Pendekatan medis dan psikologis yang dirancang untuk mendukung proses
-            pemulihan secara menyeluruh dengan fokus pada keberlanjutan perubahan
-            perilaku dan reintegrasi sosial.
+            Pendekatan sosial,psikologis yang dirancang untuk mendukung proses
+            pemulihan secara menyeluruh dengan fokus pada Hipnoterpi keberlanjutan untuk perubahan
+            perilaku dan reintegrasi sosial pulih produktif.
           </p>
 
           {/* mini highlights */}
           <div className="space-y-3">
-            <MiniItem text="Terapi Medis Terintegrasi" />
+            <MiniItem text="Terapi Hipnoterapi" />
             <MiniItem text="Pendampingan Psikologis Intensif" />
             <MiniItem text="Reintegrasi Sosial Berkelanjutan" />
+            <MiniItem text="Paska Rehabilitasi" />
+            <MiniItem text="Holistic Care" />
           </div>
         </div>
 
@@ -40,8 +42,8 @@ export default function About() {
             </h3>
 
             <p className="text-white/70 leading-relaxed">
-              Mengembalikan fungsi individu secara utuh melalui pendekatan medis,
-              psikologis, dan sosial yang terintegrasi dalam satu sistem rehabilitasi.
+              Mengembalikan fungsi individu secara utuh melalui pendekatan sosial,
+              psikologis, dan sosial yang terintegrasi dalam satu sistem rehabilitasi pulih produktif.
             </p>
           </div>
 
@@ -51,14 +53,14 @@ export default function About() {
               Holistic Care
             </p>
             <p className="text-white/60 text-xs mt-1">
-              Medis + Psikologis
+              Sosial + Psikologis + Medis + Hipnoterapi
             </p>
           </div>
 
           {/* FLOAT CARD 2 */}
-          <div className="absolute -bottom-6 -left-6 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+          <div className="absolute -bottom-10 -left-6 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
             <p className="text-xs text-white/70">
-              Berbasis Pemulihan Jangka Panjang
+              Pemulihan Rehabilitasi Melalui Rawat Inap Rawat Jalan Berbasis Pemulihan Jangka Pendek Jangka Menengah Jangka Panjang
             </p>
           </div>
 

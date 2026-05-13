@@ -304,7 +304,7 @@ export default function Home() {
             Pencapaian Kami
           </h2>
           <p className="text-white/60  md:text-base mt-3 max-w-xl mx-auto">
-            Data ini menunjukkan komitmen kami dalam memberikan layanan terbaik dan hasil yang terukur.
+            Data ini menunjukkan komitmen dalam memberikan layanan terbaik dan hasil yang terukur.
           </p>
         </div>
 

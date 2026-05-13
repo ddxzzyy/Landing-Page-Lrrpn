@@ -18,16 +18,16 @@ export default function Program() {
         </span>
 
         <h2 className="text-4xl md:text-4xl font-semibold mt-4 leading-[1.1]">
-          Program Rehabilitasi
+          Program Rehabilitasi Narkotika
         </h2>
 
         <p className="mt-6  md:text-base text-white/60 leading-relaxed max-w-2xl mx-auto">
-          Pendampingan medis, psikologis, dan sosial dengan pendekatan humanis untuk
+          Pendampingan Sosial, psikologis, dan sosial dengan pendekatan humanis untuk
           pemulihan yang berkelanjutan.
         </p>
       </div>
 
-      {/* MAIN GRID (TIDAK DIUBAH) */}
+      {/* MAIN GRID (UPDATED LAYOUT) */}
       <div className="grid md:grid-cols-12 gap-6">
 
         {/* HERO CARD */}
@@ -39,8 +39,8 @@ export default function Program() {
           </h3>
 
           <p className="text-sm md:text-base text-white/70 leading-relaxed">
-            Program inti yang menjadi fondasi seluruh proses pemulihan pasien dengan
-            pendekatan medis dan psikologis yang terintegrasi.
+            Program inti hipnoterapi yang menjadi fondasi seluruh proses pemulihan pasien dengan
+            pendekatan sosial, psikologis, dan medis yang terintegrasi.
           </p>
 
           <div className="mt-6 h-px w-12 bg-orange-500/30" />
@@ -56,8 +56,8 @@ export default function Program() {
         {/* BOTTOM ROW */}
         <Card
           className="md:col-span-4"
-          title="Rehabilitasi Medis"
-          desc="Terapi medis dan observasi klinis untuk mendukung proses detoksifikasi dan pemulihan fisik."
+          title="Rehabilitasi Sosial"
+          desc="Proses reintegrasi pasien ke lingkungan sosial melalui pendampingan terarah agar dapat berfungsi optimal di masyarakat."
         />
 
         <Card
@@ -69,8 +69,16 @@ export default function Program() {
         <Card
           className="md:col-span-4"
           title="Edukasi & Pencegahan"
-          desc="Program edukasi untuk meningkatkan kesadaran keluarga dan masyarakat."
+          desc="Program edukasi untuk meningkatkan kesadaran keluarga dan masyarakat melalui P4GN."
         />
+
+        {/* NEW FULL WIDTH CARD */}
+        <Card
+          className="md:col-span-12"
+          title="Pemantauan Klinis Melalui Tes Urine"
+          desc="Pemeriksaan klinis rutin melalui tes urine sebagai bagian dari evaluasi medis untuk mendeteksi penggunaan zat serta memantau progres pemulihan pasien secara objektif.."
+        />
+
       </div>
     </section>
   );

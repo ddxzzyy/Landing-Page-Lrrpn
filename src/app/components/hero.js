@@ -28,8 +28,8 @@ export default function Hero() {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="mt-6 text-sm md:text-base text-white/60 max-w-xl leading-relaxed"
       >
-        Rehabilitasi fisik, mental, dan sosial dengan pendekatan medis serta
-        psikologis yang terintegrasi.
+        Rehabilitasi Sosial,mental dengan pendekatan medis serta
+        psikologis yang terintegrasi untuk mencapai pulih produktif.
       </motion.p>
 
       {/* BUTTONS */}

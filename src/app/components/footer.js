@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
 
             <p className="mt-5 text-sm md:text-base text-white/60 leading-relaxed max-w-md">
-              Layanan rehabilitasi narkotika dengan pendekatan medis dan psikologis
+              Layanan rehabilitasi narkotika dengan pendekatan sosial psikologis dan medis 
               untuk pemulihan yang berkelanjutan.
             </p>
           </div>
