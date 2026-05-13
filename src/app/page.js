@@ -295,7 +295,7 @@ export default function Home() {
       >
         <div className="text-center mb-3">
           <span className="text-xs  tracking-[0.2em] text-orange-500 uppercase">
-            Tentang Kami
+            Kami
           </span>
         </div>
 
@@ -310,24 +310,33 @@ export default function Home() {
 
         {/* GRID */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+
           {statsData.map((item, i) => (
             <motion.div
               whileHover={{ y: -8, scale: 1.03 }}
               key={i}
-              className="space-y-2 border border-orange-500/10 rounded-3xl p-5 md:p-8 bg-white/5 backdrop-blur-xl"
+              className="relative overflow-hidden p-5 md:p-8 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10"
             >
-              <h3 className="text-2xl md:text-4xl font-semibold text-orange-500">
+
+              {/* subtle glow */}
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-orange-500/10 blur-2xl rounded-full" />
+
+              <h3 className="text-2xl md:text-4xl font-semibold text-orange-500 leading-[1.1]">
                 {counts[i]}
                 {item.suffix}
               </h3>
 
-              <p className="text-[11px] md:text-sm text-white/60">
+              <p className="text-[11px] md:text-sm text-white/60 mt-2 leading-relaxed">
                 {item.label}
               </p>
+
+              {/* micro line accent */}
+              <div className="mt-4 mx-auto w-10 h-px bg-white/10" />
+
             </motion.div>
           ))}
-        </div>
-      </section>
+
+        </div>      </section>
       <Program />
       <Footer />
 
