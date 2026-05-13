@@ -32,40 +32,52 @@ export default function About() {
           </div>
         </div>
 
-        {/* RIGHT SIDE (VISUAL STACKED CARDS) */}
-        <div className="relative">
+{/* RIGHT SIDE (VISUAL STACKED CARDS) */}
+<div className="relative">
 
-          {/* MAIN CARD */}
-          <div className="p-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg">
-            <h3 className="text-orange-500 font-semibold mb-3">
-              Fokus Utama Program
-            </h3>
+  {/* MAIN CARD */}
+  <div className="p-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg">
+    <h3 className="text-orange-500 font-semibold mb-3">
+      Fokus Utama Program
+    </h3>
 
-            <p className="text-white/70 leading-relaxed">
-              Mengembalikan fungsi individu secara utuh melalui pendekatan sosial,
-              psikologis, dan sosial yang terintegrasi dalam satu sistem rehabilitasi pulih produktif.
-            </p>
-          </div>
+    <p className="text-white/70 leading-relaxed">
+      Mengembalikan fungsi individu secara utuh melalui pendekatan sosial,
+      psikologis, dan sosial yang terintegrasi dalam satu sistem rehabilitasi pulih produktif.
+    </p>
+  </div>
 
-          {/* FLOAT CARD 1 */}
-          <div className="absolute -top-6 -right-6 p-5 rounded-2xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-xl">
-            <p className="text-xs text-orange-500 tracking-wide">
-              Holistic Care
-            </p>
-            <p className="text-white/60 text-xs mt-1">
-              Sosial + Psikologis + Medis + Hipnoterapi
-            </p>
-          </div>
+  {/* FLOAT CARD 1 */}
+  <div className="
+    md:absolute md:-top-6 md:-right-6
+    mt-6 md:mt-0
+    p-5 rounded-2xl bg-orange-500/10 border border-orange-500/20 backdrop-blur-xl
+  ">
+    <p className="text-xs text-orange-500 tracking-wide">
+      Holistic Care
+    </p>
+    <p className="text-white/60 text-xs mt-1">
+      Sosial + Psikologis + Medis + Hipnoterapi
+    </p>
+  </div>
 
-          {/* FLOAT CARD 2 */}
-          <div className="absolute -bottom-10 -left-6 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
-            <p className="text-xs text-white/70">
-              Pemulihan Rehabilitasi Melalui Rawat Inap Rawat Jalan Berbasis Pemulihan Jangka Pendek Jangka Menengah Jangka Panjang
-            </p>
-          </div>
+  {/* FLOAT CARD 2 */}
+  <div className="
+    md:absolute md:-bottom-18 md:-left-6
+    mt-6 md:mt-0
+    p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl
+  ">
+    <p className="text-xs text-orange-500 mb-2 tracking-wide">
+      Lembaga Rehabilitasi Komponen Masyarakat
+    </p>
+    <p className="text-xs text-white/70 leading-relaxed">
+      Pemulihan rehabilitasi melalui rawat inap dan rawat jalan berbasis
+      jangka pendek, menengah dan panjang.
+    </p>
+  </div>
 
-        </div>
-      </div>
+</div>
+</div>
     </section>
   );
 }

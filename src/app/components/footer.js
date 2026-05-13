@@ -28,7 +28,7 @@ export default function Footer() {
               />
 
               <h2 className="text-[11px] tracking-[0.25em] uppercase text-orange-500 font-medium">
-                LRRPN-BI SURABAYA
+                LRPPN-BI SURABAYA
               </h2>
             </div>
 
@@ -72,11 +72,11 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:lrrpnbisurabaya@gmail.com"
+                href="mailto:lrppnbisurabaya@gmail.com"
                 className="flex items-center gap-2 text-sm text-white/60 hover:text-orange-400 transition"
               >
                 <Mail size={16} />
-                lrrpnbisurabaya@gmail.com
+                lrppnbisurabaya@gmail.com
               </a>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-orange-500/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
 
           <p className="text-xs text-white/40">
-            © 2026 LRRPN-BI Surabaya
+            © 2026 LRPPN-BI Surabaya
           </p>
 
           <div className="flex gap-8 text-xs text-white/50">

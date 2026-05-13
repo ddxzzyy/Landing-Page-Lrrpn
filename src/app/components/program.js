@@ -22,7 +22,7 @@ export default function Program() {
         </h2>
 
         <p className="mt-6  md:text-base text-white/60 leading-relaxed max-w-2xl mx-auto">
-          Pendampingan Sosial, psikologis, dan sosial dengan pendekatan humanis untuk
+          Pendampingan Sosial, psikologis dengan pendekatan humanis untuk
           pemulihan yang berkelanjutan.
         </p>
       </div>

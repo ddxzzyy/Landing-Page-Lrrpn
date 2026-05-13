@@ -22,7 +22,7 @@ export default function Navbar() {
           />
 
           <h1 className="text-[10px] md:text-xs  text-orange-500 uppercase font-semibold tracking-[0.2em]">
-            LRRPN-BI SURABAYA
+            LRPPN-BI SURABAYA
           </h1>
         </div>
 

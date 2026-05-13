@@ -16,10 +16,19 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-5xl sm:text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-orange-500"
       >
-        LRRPN-BI
+        LRPPN-BI
         <br />
         <span className="text-white">SURABAYA</span>
       </motion.h1>
+
+     <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl sm:text-4xl mt-4 md:text-6xl font-semibold leading-[1.05] tracking-tight text-orange-500"
+      >
+        LRKM
+        </motion.h2>
 
       {/* DESCRIPTION */}
       <motion.p
@@ -28,9 +37,11 @@ export default function Hero() {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="mt-6 text-sm md:text-base text-white/60 max-w-xl leading-relaxed"
       >
-        Rehabilitasi Sosial,mental dengan pendekatan medis serta
-        psikologis yang terintegrasi untuk mencapai pulih produktif.
+        Rehabilitasi Sosial,mental dengan pendekatan Hipnoterapi serta
+        Psikologis yang Terintegrasi untuk mencapai pulih produktif.
       </motion.p>
+
+
 
       {/* BUTTONS */}
       <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
