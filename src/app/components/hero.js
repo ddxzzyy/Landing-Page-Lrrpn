@@ -14,7 +14,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl sm:text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-orange-500"
+        className="text-5xl sm:text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-orange-500"
       >
         LRRPN-BI
         <br />

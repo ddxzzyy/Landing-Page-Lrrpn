@@ -295,15 +295,15 @@ export default function Home() {
       >
         <div className="text-center mb-3">
           <span className="text-xs  tracking-[0.2em] text-orange-500 uppercase">
-            Kami
+            Kinerja Kami
           </span>
         </div>
 
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
+          <h2 className="text-4xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
             Pencapaian Kami
           </h2>
-          <p className="text-white/60 text-sm md:text-base mt-3 max-w-xl mx-auto">
+          <p className="text-white/60  md:text-base mt-3 max-w-xl mx-auto">
             Data ini menunjukkan komitmen kami dalam memberikan layanan terbaik dan hasil yang terukur.
           </p>
         </div>

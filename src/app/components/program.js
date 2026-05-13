@@ -17,11 +17,11 @@ export default function Program() {
           Layanan Kami
         </span>
 
-        <h2 className="text-3xl md:text-4xl font-semibold mt-4 leading-[1.1]">
+        <h2 className="text-4xl md:text-4xl font-semibold mt-4 leading-[1.1]">
           Program Rehabilitasi
         </h2>
 
-        <p className="mt-6 text-sm md:text-base text-white/60 leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6  md:text-base text-white/60 leading-relaxed max-w-2xl mx-auto">
           Pendampingan medis, psikologis, dan sosial dengan pendekatan humanis untuk
           pemulihan yang berkelanjutan.
         </p>

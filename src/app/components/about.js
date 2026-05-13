@@ -12,7 +12,7 @@ export default function About() {
             Tentang Kami
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
+          <h2 className="text-4xl md:text-4xl font-semibold mt-3 mb-5 leading-tight">
             Pendekatan Humanis dalam Rehabilitasi
           </h2>
 
